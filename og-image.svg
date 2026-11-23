@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .brand { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; fill: #13162b; }
+      .headline { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 68px; font-weight: 800; fill: #13162b; letter-spacing: -0.03em; }
+      .subhead { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 32px; font-weight: 600; fill: #525875; }
+      .badge-text { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 600; fill: #9d174d; }
+      .tagline { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 22px; fill: #525875; }
+      .url { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600; fill: #1d4ed8; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" class="bg" />
+
+  <!-- Outer Border Frame -->
+  <rect x="30" y="30" width="1140" height="570" rx="24" fill="#ffffff" stroke="#e7e9f2" stroke-width="2" />
+
+  <!-- S Monogram Logo -->
+  <g transform="translate(80, 80)">
+    <rect width="56" height="56" rx="14" fill="#13162b" />
+    <path d="M38 19.5C38 14.5 33.5 12 28 12C22 12 18 15.5 18 20.5C18 29 38 26 38 35.5C38 41 33.5 44 28 44C21.5 44 17.5 40 17 35" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <circle cx="41.5" cy="15" r="4" fill="#be185d" />
+  </g>
+
+  <!-- Brand Domain -->
+  <text x="152" y="118" class="brand">sumesh.dev</text>
+  <circle cx="318" cy="111" r="5" fill="#be185d" />
+
+  <!-- Wi-Fi Happiness Mini Badge -->
+  <g transform="translate(1010, 75)">
+    <rect width="110" height="110" rx="20" fill="#ffffff" stroke="#e7e9f2" stroke-width="1.5" />
+    <path d="M35 48 C 45 34, 65 34, 75 48" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M43 59 C 50 50, 60 50, 67 59" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round" fill="none" />
+    <circle cx="55" cy="72" r="4.5" fill="#1d4ed8" />
+  </g>
+
+  <!-- Main Headline -->
+  <text x="80" y="270" class="headline">Sumesh J</text>
+
+  <!-- Subhead -->
+  <text x="80" y="330" class="subhead">Applied AI &amp; Distributed Systems Engineer</text>
+
+  <!-- Description / Focus -->
+  <text x="80" y="380" class="tagline">High-concurrency microservices, event-driven architectures, and ML wait-time prediction.</text>
+
+  <!-- Tech Stack Hashtags / Pills -->
+  <g transform="translate(80, 425)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="160" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1" />
+    <text x="16" y="24" class="badge-text">#microservices</text>
+
+    <!-- Pill 2 -->
+    <rect x="175" y="0" width="125" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1" />
+    <text x="191" y="24" class="badge-text">#rabbitmq</text>
+
+    <!-- Pill 3 -->
+    <rect x="315" y="0" width="135" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1" />
+    <text x="331" y="24" class="badge-text">#python-ml</text>
+
+    <!-- Pill 4 -->
+    <rect x="465" y="0" width="145" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1" />
+    <text x="481" y="24" class="badge-text">#redis-mutex</text>
+
+    <!-- Pill 5 -->
+    <rect x="625" y="0" width="135" height="38" rx="8" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1" />
+    <text x="641" y="24" class="badge-text">#distributed</text>
+  </g>
+
+  <!-- Bottom Details -->
+  <line x1="80" y1="510" x2="1120" y2="510" stroke="#f0f1f7" stroke-width="1.5" />
+
+  <text x="80" y="555" class="url">https://sumesh.dev</text>
+  <text x="760" y="555" class="tagline">SpotQ · Bookent · Brototype Fellowship</text>
+</svg>
