@@ -1,0 +1,1132 @@
+/* ==========================================================================
+   Sumesh J — Tania.dev Inspired Minimalist & Creative Portfolio
+   Theme: Pure White Canvas with Dark Blueberry & Magenta Accents
+   ========================================================================== */
+
+:root {
+  /* White Canvas & Backgrounds */
+  --bg-white: #ffffff;
+  --bg-subtle: #fafbfe;
+  --bg-code: #f3f5fa;
+  --border-hairline: #e9ecf4;
+  --border-subtle: #dbe0ee;
+
+  --blueberry-primary: #15182e;
+  /* Deep midnight blueberry for headings */
+  --blueberry-body: #232742;
+  /* Dark blueberry for body copy */
+  --blueberry-muted: #5e6589;
+  /* Muted blueberry for dates & meta */
+  --blueberry-faint: #9198ba;
+  /* Faint blueberry for small hints */
+  --blueberry-link: #242c5b;
+  /* Dark blueberry interactive links */
+  --blueberry-link-hover: #485294;
+  /* Hover blueberry */
+  --blueberry-line: #edf0f7;
+  /* Subtle hairline divider */
+
+  /* Dark Blueberry Typography (Primary Theme) */
+  --blueberry-darkest: #13162b;   /* Main headings, brand */
+  --blueberry-body: #232742;      /* Crisp readable text */
+  --blueberry-muted: #5e668c;     /* Dates, subtitles, labels */
+  --blueberry-faint: #9ea5c4;     /* Dividers, hairline accents */
+
+  /* Dark Blue for Underlined Links (Requested by user) */
+  --link-blue: #1d4ed8;           /* Classic deep link blue */
+  --link-blue-hover: #1e40af;     /* Rich darker blue on hover */
+  --link-underline: #93c5fd;      /* Soft blue underline tint */
+
+  /* Deep Magenta / Berry Accent for Hashtags & Story Highlights */
+  --magenta-primary: #9d174d;     /* Deep rich magenta / berry (high contrast on white) */
+  --magenta-dark: #831843;        /* Darker magenta for active/focus */
+  --magenta-soft-bg: #fdf2f8;     /* Soft berry background wash */
+  --magenta-border: #fbcfe8;      /* Delicate magenta border */
+
+  /* Typography Stacks */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+
+  /* Layout Boundaries */
+  --layout-max-width: 1040px;
+  --sidebar-width: 230px;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Baseline
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 32px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-white);
+  color: var(--blueberry-body);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #fce7f3;
+  color: var(--magenta-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Typography, Links & Spans
+   -------------------------------------------------------------------------- */
+a {
+  color: var(--link-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--link-blue-hover);
+  text-decoration-color: var(--link-blue-hover);
+}
+
+.link-dark-blue {
+  color: var(--link-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.link-dark-blue:hover {
+  color: var(--link-blue-hover);
+  text-decoration-color: var(--link-blue-hover);
+}
+
+.highlight-magenta {
+  color: var(--magenta-primary);
+  font-weight: 600;
+}
+
+.highlight-text {
+  color: var(--blueberry-darkest);
+  font-weight: 600;
+}
+
+.sep {
+  color: var(--blueberry-faint);
+  margin: 0 5px;
+  font-size: 0.85rem;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  color: var(--blueberry-darkest);
+  background-color: var(--bg-code);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-hairline);
+}
+
+/* --------------------------------------------------------------------------
+   2-Column Layout Wrapper (Tania.dev Style)
+   -------------------------------------------------------------------------- */
+.layout-wrapper {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Navbar, Backdrop & Drawer (Hidden on Desktop > 842px)
+   -------------------------------------------------------------------------- */
+.mobile-navbar,
+.mobile-drawer-backdrop,
+.mobile-drawer {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Left Sidebar
+   -------------------------------------------------------------------------- */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding-top: 40px;
+  padding-bottom: 36px;
+  padding-right: 28px;
+  border-right: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sidebar Brand */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--blueberry-darkest);
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blueberry-darkest);
+}
+
+.brand-domain {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blueberry-darkest);
+  letter-spacing: -0.02em;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--magenta-primary);
+  display: inline-block;
+  margin-left: -2px;
+}
+
+/* Sidebar Bio */
+.sidebar-bio {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--blueberry-muted);
+}
+
+.sidebar-bio strong {
+  color: var(--magenta-primary);
+  font-weight: 600;
+}
+
+/* Sidebar Navigation Items */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--blueberry-body);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.sidebar-nav-item:hover {
+  background-color: var(--bg-subtle);
+  color: var(--blueberry-darkest);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.sidebar-nav-item.active {
+  color: var(--magenta-primary);
+  font-weight: 600;
+  background-color: var(--magenta-soft-bg);
+}
+
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blueberry-muted);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.sidebar-nav-item:hover .nav-icon,
+.mobile-dropdown-link:hover .nav-icon {
+  color: var(--blueberry-darkest);
+}
+
+.sidebar-nav-item.active .nav-icon,
+.mobile-dropdown-link.active .nav-icon {
+  color: var(--magenta-primary);
+}
+
+/* Sidebar Footer & Socials (Pinned All Below) */
+.sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sidebar-social-icons a {
+  color: var(--blueberry-muted);
+  text-decoration: none;
+  display: inline-flex;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.sidebar-social-icons a:hover {
+  color: var(--magenta-primary);
+  transform: translateY(-1px);
+}
+
+.sidebar-text-links {
+  font-size: 0.82rem;
+  color: var(--blueberry-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-text-links a {
+  color: var(--blueberry-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.sidebar-text-links a:hover {
+  color: var(--link-blue);
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Right Main Content Area
+   -------------------------------------------------------------------------- */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding-top: 48px;
+  padding-bottom: 72px;
+  padding-left: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   Hero / About Block
+   -------------------------------------------------------------------------- */
+.hero-block {
+  margin-bottom: 52px;
+}
+
+.hero-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.hero-text-col {
+  flex: 1;
+}
+
+.hero-headline {
+  font-size: clamp(2.2rem, 4vw, 2.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--blueberry-darkest);
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+.hero-subhead {
+  font-size: 1.05rem;
+  color: var(--blueberry-muted);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Creative Wi-Fi Happiness Card Widget (Ruben Jauregui Inspired) */
+.hero-anim-col {
+  flex-shrink: 0;
+}
+
+.wifi-happiness-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 108px;
+  height: 108px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 6px;
+  box-shadow: 0 4px 16px rgba(19, 22, 43, 0.05);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.wifi-happiness-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(157, 23, 77, 0.1);
+  border-color: var(--magenta-border);
+}
+
+.wifi-happiness-card:active {
+  transform: scale(0.96);
+}
+
+#wifiSmileCanvas {
+  width: 78px;
+  height: 78px;
+  display: block;
+}
+
+.wifi-happiness-status {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blueberry-muted);
+  margin-top: -2px;
+  transition: color 0.25s ease;
+}
+
+.wifi-happiness-card.is-happy .wifi-happiness-status {
+  color: var(--magenta-primary);
+}
+
+/* A Brief Timeline (Tania.dev Style) */
+.timeline-story-block {
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 28px;
+}
+
+.subblock-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--blueberry-darkest);
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.story-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.story-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.story-years {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--blueberry-muted);
+  font-weight: 500;
+}
+
+.story-content {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--blueberry-body);
+}
+
+.story-link {
+  color: var(--link-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  font-weight: 500;
+}
+
+.story-link:hover {
+  color: var(--link-blue-hover);
+}
+
+.story-also {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--blueberry-body);
+  border-top: 1px dashed var(--border-hairline);
+  padding-top: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Content Blocks (Projects, Skills, Education, Connect)
+   -------------------------------------------------------------------------- */
+.content-block {
+  margin-bottom: 56px;
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 36px;
+}
+
+.block-header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.block-heading {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--blueberry-darkest);
+  letter-spacing: -0.02em;
+}
+
+.block-meta {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--blueberry-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* --------------------------------------------------------------------------
+   Projects Entries
+   -------------------------------------------------------------------------- */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.project-card-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-entry-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-entry-left {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.project-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--link-blue);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.project-entry-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.project-entry-title a {
+  color: var(--link-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+}
+
+.project-entry-title a:hover {
+  color: var(--link-blue-hover);
+  text-decoration-color: var(--link-blue-hover);
+}
+
+.project-entry-date {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--blueberry-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+/* Hashtags (Magenta / Berry Pill Style) */
+.project-entry-tags,
+.skill-row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hashtag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 2px 7px;
+  background-color: var(--magenta-soft-bg);
+  color: var(--magenta-primary);
+  border: 1px solid var(--magenta-border);
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.project-entry-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--blueberry-body);
+}
+
+.project-entry-links {
+  font-size: 0.86rem;
+}
+
+/* --------------------------------------------------------------------------
+   Skills Arsenal Rows
+   -------------------------------------------------------------------------- */
+.skills-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-row-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--blueberry-darkest);
+}
+
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--magenta-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Education Block
+   -------------------------------------------------------------------------- */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 0.96rem;
+}
+
+.edu-date {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--blueberry-muted);
+  white-space: nowrap;
+}
+
+.edu-place {
+  font-size: 0.86rem;
+  color: var(--blueberry-muted);
+}
+
+.edu-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--blueberry-body);
+  margin-top: 2px;
+}
+
+.languages-block {
+  font-size: 0.92rem;
+  border-top: 1px dashed var(--border-hairline);
+  padding-top: 14px;
+}
+
+.lang-label {
+  color: var(--blueberry-darkest);
+  margin-right: 6px;
+}
+
+.lang-val {
+  color: var(--blueberry-body);
+}
+
+/* --------------------------------------------------------------------------
+   Connect Table
+   -------------------------------------------------------------------------- */
+.connect-lead {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--blueberry-body);
+  margin-bottom: 20px;
+}
+
+.connect-table {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.connect-table li {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  font-size: 0.92rem;
+}
+
+.conn-name {
+  width: 90px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blueberry-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.mobile-footer-socials {
+  display: none;
+}
+
+.content-footer {
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 18px;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--blueberry-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout (Mobile & Tablet <= 842px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 842px) {
+  .layout-wrapper {
+    flex-direction: column;
+    padding: 0 18px;
+  }
+
+  /* Completely hide the desktop sidebar on <= 842px to eliminate huge blank spaces */
+  .sidebar {
+    display: none !important;
+  }
+
+  /* Elegant sticky mobile top navbar with toggler */
+  .mobile-navbar {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-hairline);
+    margin: 0 -18px;
+    padding: 0;
+  }
+
+  .mobile-navbar-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    padding: 0 18px;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mobile-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .mobile-resume-pill {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: var(--magenta-soft-bg);
+    color: var(--magenta-primary);
+    border: 1px solid var(--magenta-border);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.15s ease;
+  }
+
+  .mobile-resume-pill:hover {
+    background-color: #fce7f3;
+  }
+
+  /* Minimal Toggler Button */
+  .mobile-toggle-btn {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .mobile-toggle-btn:hover {
+    border-color: var(--blueberry-darkest);
+    background-color: var(--bg-subtle);
+  }
+
+  .toggle-bar {
+    width: 17px;
+    height: 2px;
+    background-color: var(--blueberry-darkest);
+    border-radius: 2px;
+    transition: transform 0.22s ease, opacity 0.2s ease;
+  }
+
+  .mobile-toggle-btn.open .toggle-bar:nth-child(1) {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .mobile-toggle-btn.open .toggle-bar:nth-child(2) {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  /* Overlay Backdrop (dimmed + blur) */
+  .mobile-drawer-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(19, 22, 43, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .mobile-drawer-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Off-canvas Overlay Drawer (Slides smoothly from right) */
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 84vw;
+    height: 100vh;
+    height: 100dvh;
+    background-color: #ffffff;
+    z-index: 1200;
+    transform: translateX(100%);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -6px 0 28px rgba(19, 22, 43, 0.14);
+    padding: 20px 18px;
+    overflow-y: auto;
+  }
+
+  .mobile-drawer.open {
+    transform: translateX(0);
+  }
+
+  .mobile-drawer-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    gap: 24px;
+  }
+
+  .mobile-drawer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .mobile-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-hairline);
+  }
+
+  .mobile-drawer-close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--blueberry-muted);
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .mobile-drawer-close:hover {
+    color: var(--blueberry-darkest);
+    background-color: var(--bg-subtle);
+  }
+
+  .mobile-drawer-bio {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    color: var(--blueberry-muted);
+  }
+
+  .mobile-drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mobile-drawer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--blueberry-body);
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .mobile-drawer-link:hover {
+    background-color: var(--bg-subtle);
+    color: var(--blueberry-darkest);
+    transform: translateX(2px);
+  }
+
+  .mobile-drawer-link.active {
+    background-color: var(--magenta-soft-bg);
+    color: var(--magenta-primary);
+    font-weight: 600;
+  }
+
+  .mobile-drawer-link.active .nav-icon {
+    color: var(--magenta-primary);
+  }
+
+  .mobile-drawer-footer {
+    border-top: 1px solid var(--border-hairline);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-drawer-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .mobile-drawer-socials a {
+    color: var(--blueberry-muted);
+    display: inline-flex;
+    text-decoration: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+  }
+
+  .mobile-drawer-socials a:hover {
+    color: var(--magenta-primary);
+    transform: translateY(-1px);
+  }
+
+  .mobile-drawer-text-links {
+    font-size: 0.82rem;
+    color: var(--blueberry-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mobile-drawer-text-links a {
+    color: var(--blueberry-muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .mobile-drawer-text-links a:hover {
+    color: var(--link-blue);
+    text-decoration: underline;
+  }
+
+  body.drawer-open {
+    overflow: hidden;
+  }
+
+  .main-content {
+    padding-left: 0;
+    padding-top: 24px;
+  }
+
+  .hero-block {
+    margin-bottom: 36px;
+  }
+
+  .hero-grid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.75rem, 5.2vw, 2.2rem);
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+    line-height: 1.16;
+  }
+
+  .hero-subhead {
+    font-size: 0.88rem;
+    line-height: 1.42;
+  }
+
+  .wifi-happiness-card {
+    width: 84px;
+    height: 84px;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  #wifiSmileCanvas {
+    width: 60px;
+    height: 60px;
+  }
+
+  .story-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .project-entry-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .edu-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .connect-table li {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .conn-name {
+    width: auto;
+  }
+
+  .mobile-footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--border-hairline);
+  }
+
+  .content-footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

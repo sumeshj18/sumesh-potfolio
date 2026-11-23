@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Deep Dark Blueberry Squircle Background -->
+  <rect width="64" height="64" rx="16" fill="#13162b" />
+  
+  <!-- Subtle inner border for crisp contrast on all browser tabs -->
+  <rect x="0.5" y="0.5" width="63" height="63" rx="15.5" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+  
+  <!-- Modern Bold Geometric Letter 'S' Monogram -->
+  <path d="M43 22.5C43 17 38 14 32 14C25.5 14 21 18 21 23.5C21 33 43 29.5 43 40.5C43 46.5 38 50 32 50C25 50 20.5 45.5 20 40" 
+        stroke="#ffffff" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+        
+  <!-- Signature Berry Magenta Accent Dot -->
+  <circle cx="47" cy="17" r="4" fill="#be185d" />
+</svg>

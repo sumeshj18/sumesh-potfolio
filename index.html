@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumesh J — Applied AI &amp; Distributed Systems Engineer</title>
+  <meta name="description" content="Portfolio of Sumesh J, Applied AI & Distributed Systems Engineer.">
+
+  <!-- Favicon: S Letter SVG Monogram -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Fonts: Plus Jakarta Sans + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ==============================================
+       Mobile Overlay Backdrop & Drawer (<= 842px)
+       ============================================== -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-top">
+        <div class="mobile-drawer-header">
+          <div class="mobile-brand">
+            <a href="#about" class="brand-link" id="drawerBrandLink">
+              <span class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+                  <rect width="64" height="64" rx="16" fill="#13162b" />
+                  <path d="M43 22.5C43 17 38 14 32 14C25.5 14 21 18 21 23.5C21 33 43 29.5 43 40.5C43 46.5 38 50 32 50C25 50 20.5 45.5 20 40" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="47" cy="17" r="4.5" fill="#be185d" />
+                </svg>
+              </span>
+              <span class="brand-domain">sumesh.dev</span>
+            </a>
+            <span class="brand-dot"></span>
+          </div>
+
+          <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <p class="mobile-drawer-bio">
+          I'm <strong class="highlight-magenta">Sumesh</strong>, applied AI &amp; distributed systems engineer. This is my digital garden.
+        </p>
+
+        <nav class="mobile-drawer-nav">
+          <a href="#about" class="mobile-drawer-link active">
+            <span class="nav-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="5" />
+                <path d="M20 21a8 8 0 0 0-16 0" />
+              </svg>
+            </span>
+            <span>About me</span>
+          </a>
+          <a href="#projects" class="mobile-drawer-link">
+            <span class="nav-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="3" rx="2" />
+                <line x1="8" x2="16" y1="21" y2="21" />
+                <line x1="12" x2="12" y1="17" y2="21" />
+              </svg>
+            </span>
+            <span>Projects</span>
+          </a>
+          <a href="#skills" class="mobile-drawer-link">
+            <span class="nav-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m13 2-2 10h5L11 22l2-10H8l5-10z" />
+              </svg>
+            </span>
+            <span>Skills</span>
+          </a>
+          <a href="#education" class="mobile-drawer-link">
+            <span class="nav-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </span>
+            <span>Education</span>
+          </a>
+          <a href="#connect" class="mobile-drawer-link">
+            <span class="nav-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </span>
+            <span>Connect</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="mobile-drawer-footer">
+        <div class="mobile-drawer-socials">
+          <a href="mailto:sumeshsujesh1233@gmail.com" title="Email" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+          <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer" title="GitHub"
+            aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/iam-sumesh-j" target="_blank" rel="noopener noreferrer" title="LinkedIn"
+            aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="tel:+916282973124" title="Phone: +91 6282973124" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </a>
+        </div>
+        <div class="mobile-drawer-text-links">
+          <a href="./Sumesh J - Applied AI & Distributed Systems Engineer Resume.pdf" target="_blank">Resume</a>
+          <span class="sep">|</span>
+          <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="sep">|</span>
+          <a href="mailto:sumeshsujesh1233@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="layout-wrapper">
+
+    <!-- ==============================================
+         Mobile Top Navbar (<= 842px)
+         ============================================== -->
+    <header class="mobile-navbar" aria-label="Mobile Navigation Bar">
+      <div class="mobile-navbar-bar">
+        <div class="mobile-brand">
+          <a href="#about" class="brand-link">
+            <span class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+                <rect width="64" height="64" rx="16" fill="#13162b" />
+                <path d="M43 22.5C43 17 38 14 32 14C25.5 14 21 18 21 23.5C21 33 43 29.5 43 40.5C43 46.5 38 50 32 50C25 50 20.5 45.5 20 40" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="47" cy="17" r="4.5" fill="#be185d" />
+              </svg>
+            </span>
+            <span class="brand-domain">sumesh.dev</span>
+          </a>
+          <span class="brand-dot"></span>
+        </div>
+
+        <div class="mobile-nav-right">
+          <a href="./Sumesh J - Applied AI & Distributed Systems Engineer Resume.pdf" target="_blank"
+            class="mobile-resume-pill">Resume</a>
+
+          <!-- Toggler Button (Triggers Overlay Drawer) -->
+          <button type="button" class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==============================================
+         Left Column: Sidebar (Desktop > 842px)
+         ============================================== -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+
+        <div class="sidebar-top">
+          <!-- Brand / Domain Header -->
+          <div class="sidebar-brand">
+            <a href="#about" class="brand-link">
+              <span class="brand-icon">
+                <svg width="20" height="20" viewBox="0 0 64 64" fill="none">
+                  <rect width="64" height="64" rx="16" fill="#13162b" />
+                  <path d="M43 22.5C43 17 38 14 32 14C25.5 14 21 18 21 23.5C21 33 43 29.5 43 40.5C43 46.5 38 50 32 50C25 50 20.5 45.5 20 40" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="47" cy="17" r="4.5" fill="#be185d" />
+                </svg>
+              </span>
+              <span class="brand-domain">sumesh.dev</span>
+            </a>
+            <span class="brand-dot"></span>
+          </div>
+
+          <!-- Sidebar Short Bio -->
+          <p class="sidebar-bio">
+            I'm <strong>Sumesh</strong>, applied AI &amp; distributed systems engineer. This is my digital garden.
+          </p>
+
+          <!-- Sidebar Navigation -->
+          <nav class="sidebar-nav" aria-label="Page Navigation">
+            <a href="#about" class="sidebar-nav-item active">
+              <span class="nav-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </span>
+              <span class="nav-label">About me</span>
+            </a>
+            <a href="#projects" class="sidebar-nav-item">
+              <span class="nav-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="3" rx="2" />
+                  <line x1="8" x2="16" y1="21" y2="21" />
+                  <line x1="12" x2="12" y1="17" y2="21" />
+                </svg>
+              </span>
+              <span class="nav-label">Projects</span>
+            </a>
+            <a href="#skills" class="sidebar-nav-item">
+              <span class="nav-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m13 2-2 10h5L11 22l2-10H8l5-10z" />
+                </svg>
+              </span>
+              <span class="nav-label">Skills</span>
+            </a>
+            <a href="#education" class="sidebar-nav-item">
+              <span class="nav-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </span>
+              <span class="nav-label">Education</span>
+            </a>
+            <a href="#connect" class="sidebar-nav-item">
+              <span class="nav-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </span>
+              <span class="nav-label">Connect</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Sidebar Footer / Social Icons (Pinned to bottom) -->
+        <div class="sidebar-footer">
+          <div class="sidebar-social-icons">
+            <a href="mailto:sumeshsujesh1233@gmail.com" title="Email" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+            </a>
+            <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer" title="GitHub"
+              aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/iam-sumesh-j" target="_blank" rel="noopener noreferrer" title="LinkedIn"
+              aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="tel:+916282973124" title="Phone: +91 6282973124" aria-label="Phone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="sidebar-text-links">
+            <a href="./Sumesh J - Applied AI & Distributed Systems Engineer Resume.pdf" target="_blank">Resume</a>
+            <span class="sep">|</span>
+            <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="sep">|</span>
+            <a href="mailto:sumeshsujesh1233@gmail.com">Email</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- ==============================================
+         Right Column: Main Content
+         ============================================== -->
+    <main class="main-content">
+
+      <!-- About / Hero Section -->
+      <section id="about" class="hero-block">
+
+        <div class="hero-grid">
+          <div class="hero-text-col">
+            <h1 class="hero-headline">Hey, I'm Sumesh!</h1>
+            <p class="hero-subhead">
+              Applied AI, Full-Stack &amp; Distributed Systems Engineer.
+            </p>
+          </div>
+
+          <!-- Creative Wi-Fi Happiness Animation Widget -->
+          <div class="hero-anim-col">
+            <div class="wifi-happiness-card" id="wifiHappinessWidget" title="Click me to smile!" role="button" tabindex="0" aria-label="Interactive Wi-Fi Signal Happiness Animation">
+              <canvas id="wifiSmileCanvas" width="96" height="96"></canvas>
+              <span class="wifi-happiness-status" id="wifiStatusText">connected</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- A Brief Timeline (Tania.dev Style) -->
+        <div class="timeline-story-block">
+          <h2 class="subblock-title">A brief timeline</h2>
+
+          <div class="story-timeline">
+
+            <div class="story-item">
+              <span class="story-years">2023–2025</span>
+              <div class="story-content">
+                <strong class="highlight-magenta">Foundations:</strong> Studied Humanities for higher secondary
+                education at <span class="highlight-text">MES HSS Vandanmedu</span> in Idukki, Kerala. Along the way,
+                independently self-taught computer science, data structures, algorithms, and programming fundamentals
+                from scratch.
+              </div>
+            </div>
+
+            <div class="story-item">
+              <span class="story-years">2025–now</span>
+              <div class="story-content">
+                <strong class="highlight-magenta">Full-stack &amp; distributed systems fellow:</strong> Immersive
+                engineering fellowship at <a href="https://brototype.com" target="_blank" rel="noopener noreferrer"
+                  class="story-link">Brototype</a> in Kochi, Kerala. Architecting microservice ecosystems, RabbitMQ
+                event buses, Redis atomic mutex locks, and Python ML wait-time prediction services. Built <a
+                  href="#projects" class="story-link">SpotQ</a> and <a href="#projects" class="story-link">Bookent</a>.
+              </div>
+            </div>
+
+          </div>
+
+          <p class="story-also">
+            <strong class="highlight-magenta">Also:</strong> distributed systems enthusiast, terminal tinkerer,
+            AI explorer, and English Proficient speaker based in Idukki &amp; Kochi, India.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="content-block">
+
+        <div class="block-header-row">
+          <h2 class="block-heading">Projects</h2>
+          <span class="block-meta">Selected systems</span>
+        </div>
+
+        <div class="projects-container">
+
+          <!-- SpotQ -->
+          <article class="project-card-entry">
+            <div class="project-entry-top">
+              <div class="project-entry-left">
+                <span class="project-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18" cy="5" r="3" />
+                    <circle cx="6" cy="12" r="3" />
+                    <circle cx="18" cy="19" r="3" />
+                    <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+                    <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="project-entry-title">
+                    <a href="https://spotq.site/" target="_blank" rel="noopener noreferrer" class="link-dark-blue">SpotQ
+                      — Distributed AI-Powered Queue, Reservation &amp; Ordering Platform ↗</a>
+                  </h3>
+                  <span class="project-entry-date">Jul 2026</span>
+                </div>
+              </div>
+
+              <!-- Hashtags (Magenta / Berry Pill Style) -->
+              <div class="project-entry-tags">
+                <span class="hashtag">#microservices</span>
+                <span class="hashtag">#rabbitmq</span>
+                <span class="hashtag">#envoy</span>
+                <span class="hashtag">#python-ml</span>
+                <span class="hashtag">#redis</span>
+                <span class="hashtag">#terraform</span>
+              </div>
+            </div>
+
+            <p class="project-entry-desc">
+              Architected a microservices ecosystem spanning user, restaurant, queue, order, payment, and ML ETA
+              prediction services routed via <strong>Envoy API Gateway</strong>. Implemented asynchronous event-driven
+              messaging via <strong>RabbitMQ</strong> alongside <strong>Redis</strong> caching and a Python ML ETA
+              service (<code>spotq-ml-eta-service</code>) for real-time wait-time predictions. Provisioned cloud
+              infrastructure with <strong>Terraform</strong> and containerized services with <strong>Docker</strong>.
+            </p>
+
+            <div class="project-entry-links">
+              <a href="https://spotq.site/" target="_blank" rel="noopener noreferrer" class="link-dark-blue">spotq.site
+                ↗</a>
+              <span class="sep">·</span>
+              <a href="https://github.com/ACE-Program-Brototype/spotq-infra" target="_blank" rel="noopener noreferrer"
+                class="link-dark-blue">GitHub (spotq-infra) ↗</a>
+            </div>
+          </article>
+
+          <!-- Bookent -->
+          <article class="project-card-entry">
+            <div class="project-entry-top">
+              <div class="project-entry-left">
+                <span class="project-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="18" height="18" x="3" y="3" rx="2" />
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="project-entry-title">
+                    <a href="https://github.com/sumeshofficial/bookent" target="_blank" rel="noopener noreferrer"
+                      class="link-dark-blue">Bookent — High-Concurrency Event &amp; Ticketing Backend ↗</a>
+                  </h3>
+                  <span class="project-entry-date">2025</span>
+                </div>
+              </div>
+
+              <!-- Hashtags (Magenta / Berry Pill Style) -->
+              <div class="project-entry-tags">
+                <span class="hashtag">#redis-mutex</span>
+                <span class="hashtag">#socketio</span>
+                <span class="hashtag">#nodejs</span>
+                <span class="hashtag">#concurrency</span>
+                <span class="hashtag">#paypal</span>
+              </div>
+            </div>
+
+            <p class="project-entry-desc">
+              Engineered a high-concurrency event ticketing backend handling simultaneous seat reservations using atomic
+              <strong>Redis locking (<code>SETNX</code>)</strong> to eliminate double-booking race conditions.
+              Architected modular RESTful APIs with real-time <strong>Socket.IO</strong> synchronization, JWT/OAuth 2.0
+              authentication, and idempotent PayPal payment workflows.
+            </p>
+
+            <div class="project-entry-links">
+              <a href="https://github.com/sumeshofficial/bookent" target="_blank" rel="noopener noreferrer"
+                class="link-dark-blue">GitHub (bookent) ↗</a>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="content-block">
+
+        <div class="block-header-row">
+          <h2 class="block-heading">Skills</h2>
+          <span class="block-meta">Technical stack</span>
+        </div>
+
+        <div class="skills-rows">
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <span class="skill-dot"></span>
+              <strong>Applied AI &amp; GenAI:</strong>
+            </div>
+            <div class="skill-row-tags">
+              <span class="hashtag">#ai-agents</span>
+              <span class="hashtag">#rag-pipelines</span>
+              <span class="hashtag">#mcp-tooling</span>
+              <span class="hashtag">#llm-api-integration</span>
+              <span class="hashtag">#prompt-engineering</span>
+              <span class="hashtag">#ai-assisted-workflows</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <span class="skill-dot"></span>
+              <strong>Backend &amp; Distributed Systems:</strong>
+            </div>
+            <div class="skill-row-tags">
+              <span class="hashtag">#nodejs</span>
+              <span class="hashtag">#bun</span>
+              <span class="hashtag">#python</span>
+              <span class="hashtag">#rabbitmq</span>
+              <span class="hashtag">#kafka</span>
+              <span class="hashtag">#envoy-gateway</span>
+              <span class="hashtag">#socketio</span>
+              <span class="hashtag">#grpc</span>
+              <span class="hashtag">#saga-pattern</span>
+              <span class="hashtag">#outbox-pattern</span>
+              <span class="hashtag">#redis-mutex</span>
+              <span class="hashtag">#circuit-breaker</span>
+              <span class="hashtag">#zod</span>
+              <span class="hashtag">#jwt-oauth</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <span class="skill-dot"></span>
+              <strong>Databases &amp; Caching:</strong>
+            </div>
+            <div class="skill-row-tags">
+              <span class="hashtag">#postgresql</span>
+              <span class="hashtag">#redis-cache</span>
+              <span class="hashtag">#mongodb</span>
+              <span class="hashtag">#mysql</span>
+              <span class="hashtag">#firestore</span>
+              <span class="hashtag">#query-optimization</span>
+              <span class="hashtag">#acid-transactions</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <span class="skill-dot"></span>
+              <strong>Cloud, DevOps &amp; Observability:</strong>
+            </div>
+            <div class="skill-row-tags">
+              <span class="hashtag">#docker</span>
+              <span class="hashtag">#kubernetes</span>
+              <span class="hashtag">#terraform</span>
+              <span class="hashtag">#aws</span>
+              <span class="hashtag">#github-actions</span>
+              <span class="hashtag">#gitlab-ci</span>
+              <span class="hashtag">#opentelemetry</span>
+              <span class="hashtag">#prometheus</span>
+              <span class="hashtag">#grafana</span>
+              <span class="hashtag">#k6-testing</span>
+              <span class="hashtag">#owasp-top-10</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <span class="skill-dot"></span>
+              <strong>Frontend &amp; UI:</strong>
+            </div>
+            <div class="skill-row-tags">
+              <span class="hashtag">#react</span>
+              <span class="hashtag">#typescript</span>
+              <span class="hashtag">#redux-toolkit</span>
+              <span class="hashtag">#tanstack-query</span>
+              <span class="hashtag">#tailwind-css</span>
+              <span class="hashtag">#vite</span>
+              <span class="hashtag">#websockets</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <span class="skill-dot"></span>
+              <strong>Agile &amp; Collaboration:</strong>
+            </div>
+            <div class="skill-row-tags">
+              <span class="hashtag">#jira</span>
+              <span class="hashtag">#scrum</span>
+              <span class="hashtag">#sprint-planning</span>
+              <span class="hashtag">#code-reviews</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="content-block">
+
+        <div class="block-header-row">
+          <h2 class="block-heading">Education</h2>
+          <span class="block-meta">Academic &amp; Training</span>
+        </div>
+
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-header">
+              <strong class="highlight-magenta">Full-Stack Software Engineering Program</strong>
+              <span class="edu-date">Jul 2025 – Present</span>
+            </div>
+            <p class="edu-place">Brototype · Kochi, India</p>
+            <p class="edu-desc">
+              Intensive full-stack software engineering program focused on applied distributed architecture,
+              microservices, asynchronous message queues, and production-grade delivery.
+            </p>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-header">
+              <strong class="highlight-magenta">Higher Secondary Education (Humanities)</strong>
+              <span class="edu-date">Jun 2023 – Mar 2025</span>
+            </div>
+            <p class="edu-place">MES HSS Vandanmedu · Idukki, Kerala</p>
+            <p class="edu-desc">
+              Completed higher secondary education in Humanities while independently self-teaching computer programming,
+              data structures, algorithms, and software design fundamentals.
+            </p>
+          </div>
+        </div>
+
+        <div class="languages-block">
+          <span class="lang-label"><strong>Languages:</strong></span>
+          <span class="lang-val">English (Proficient) · Malayalam (Native)</span>
+        </div>
+
+      </section>
+
+      <!-- Connect Section -->
+      <section id="connect" class="content-block">
+
+        <div class="block-header-row">
+          <h2 class="block-heading">Connect</h2>
+          <span class="block-meta">Say Hello</span>
+        </div>
+
+        <p class="connect-lead">
+          I am actively exploring engineering roles in Applied AI, Distributed Systems, and Full-Stack development. Feel
+          free to reach out directly:
+        </p>
+
+        <ul class="connect-table">
+          <li>
+            <span class="conn-name">Email</span>
+            <a href="mailto:sumeshsujesh1233@gmail.com" class="link-dark-blue">sumeshsujesh1233@gmail.com ↗</a>
+          </li>
+          <li>
+            <span class="conn-name">Telephone</span>
+            <a href="tel:+916282973124" class="link-dark-blue">+91 6282973124 ↗</a>
+          </li>
+          <li>
+            <span class="conn-name">GitHub</span>
+            <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer"
+              class="link-dark-blue">github.com/sumeshj18 ↗</a>
+          </li>
+          <li>
+            <span class="conn-name">LinkedIn</span>
+            <a href="https://linkedin.com/in/iam-sumesh-j" target="_blank" rel="noopener noreferrer"
+              class="link-dark-blue">linkedin.com/in/iam-sumesh-j ↗</a>
+          </li>
+          <li>
+            <span class="conn-name">Resume</span>
+            <a href="./Sumesh J - Applied AI & Distributed Systems Engineer Resume.pdf" target="_blank"
+              class="link-dark-blue">Sumesh J — Resume (PDF) ↗</a>
+          </li>
+        </ul>
+
+      </section>
+
+      <!-- Page Footer -->
+      <footer class="content-footer">
+        <div class="mobile-footer-socials">
+          <div class="sidebar-social-icons">
+            <a href="mailto:sumeshsujesh1233@gmail.com" title="Email" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/iam-sumesh-j" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="tel:+916282973124" title="Phone: +91 6282973124" aria-label="Phone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+          
+          <div class="sidebar-text-links">
+            <a href="./Sumesh J - Applied AI & Distributed Systems Engineer Resume.pdf" target="_blank">Resume</a>
+            <span class="sep">|</span>
+            <a href="https://github.com/sumeshj18" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span class="sep">|</span>
+            <a href="mailto:sumeshsujesh1233@gmail.com">Email</a>
+          </div>
+        </div>
+
+        <p class="footer-copy">Designed with the right hemisphere of brain. &copy; 2026 Sumesh J</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
