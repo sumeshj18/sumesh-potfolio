@@ -25,8 +25,8 @@
   </g>
 
   <!-- Brand Domain -->
-  <text x="152" y="118" class="brand">sumesh.dev</text>
-  <circle cx="318" cy="111" r="5" fill="#be185d" />
+  <text x="152" y="118" class="brand">sumeshj.in</text>
+  <circle cx="310" cy="111" r="5" fill="#be185d" />
 
   <!-- Wi-Fi Happiness Mini Badge -->
   <g transform="translate(1010, 75)">
@@ -71,6 +71,6 @@
   <!-- Bottom Details -->
   <line x1="80" y1="510" x2="1120" y2="510" stroke="#f0f1f7" stroke-width="1.5" />
 
-  <text x="80" y="555" class="url">https://sumesh.dev</text>
+  <text x="80" y="555" class="url">https://sumeshj.in</text>
   <text x="760" y="555" class="tagline">SpotQ · Bookent · Brototype Fellowship</text>
 </svg>
