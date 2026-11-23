@@ -1,5 +1,5 @@
 /**
- * Sumesh J — Portfolio Interactive Navigation, Drawer & Wi-Fi Happiness Animation
+ * Sumesh J - Portfolio Interactive Navigation, Drawer & Wi-Fi Happiness Animation
  */
 
 document.addEventListener('DOMContentLoaded', () => {
